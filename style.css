@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
+body {
+    background-color: #0d0d0d;
+    color: #fff;
+    line-height: 1.6;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+nav h1 {
+    color: #ff004f;
+    font-size: 28px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 25px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #ff004f;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+.hero h2 {
+    font-size: 40px;
+    animation: fadeInUp 1s ease forwards;
+}
+.hero h2 span {
+    color: #ff004f;
+}
+.hero p {
+    font-size: 18px;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+.hero button {
+    background: #ff004f;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.hero button:hover {
+    background: white;
+    color: #ff004f;
+}
+
+section {
+    padding: 80px 50px;
+}
+.about {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ff004f;
+}
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.skill-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1 1 calc(25% - 40px);
+    min-width: 200px;
+    text-align: center;
+    transition: 0.3s;
+}
+.skill-card:hover {
+    transform: translateY(-8px);
+    background: #ff004f;
+}
+.skill-card h3 {
+    margin-bottom: 10px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.project-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.project-card:hover {
+    transform: scale(1.03);
+}
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.project-card h3 {
+    padding: 15px;
+}
+
+.contact {
+    text-align: center;
+}
+.contact a {
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+i
+{
+    font-size: 40px;
+}
+
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 32px;
+    margin: 0 15px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: scale(1.2);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #ff004f;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 20px;
+    position: relative;
+    background: #1a1a1a;
+    border-radius: 10px;
+    width: 45%;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.timeline-item:hover {
+    background: #ff004f;
+    transform: translateY(-5px);
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 55%;
+}
+
+.timeline-icon {
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    background: #ff004f;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.timeline-content h2 {
+    margin-bottom: 5px;
+}
+
+.timeline-content span {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.timeline-content p {
+    margin-top: 5px;
+    color: #eee;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        margin-left: 40px;
+    }
+    .timeline-icon {
+        left: -20px;
+    }
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 10px;
+    }
+}
+
