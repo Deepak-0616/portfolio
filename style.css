@@ -146,11 +146,6 @@ section {
     font-size: 18px;
 
 }
-i
-{
-    font-size: 40px;
-}
-
 
 .social-icons {
     margin-top: 20px;
@@ -158,7 +153,7 @@ i
 
 .social-icons a {
     color: white;
-    font-size: 32px;
+    font-size: 37px;
     margin: 0 15px;
     display: inline-block;
     transition: 0.3s ease-in-out;
@@ -209,16 +204,28 @@ i
 .timeline-item:nth-child(even) {
     left: 55%;
 }
+/* Connector line for all items */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 30px; /* Align with icon center */
+    height: 3px;
+    background: #ff004f;
+}
 
 .timeline-icon {
     position: absolute;
     top: 20px;
-    left: -40px;
+    left: -20px;
     background: #ff004f;
     color: white;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .timeline-content h2 {
@@ -235,18 +242,41 @@ i
     color: #eee;
 }
 
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+    .timeline {
+        padding-left: 40px;
+    }
     .timeline::after {
-        left: 20px;
+        left: 15px;
     }
     .timeline-item {
-        width: 100%;
-        left: 0 !important;
-        margin-left: 40px;
+        padding-left: 55px;
     }
     .timeline-icon {
-        left: -20px;
+        left: -3px;
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        padding-left: 35px;
+    }
+    .timeline::after {
+        left: 12px;
+    }
+    .timeline-item {
+        font-size: 14px;
+        padding-left: 50px;
+    }
+    .timeline-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        left: -1px;
     }
 }
 footer {
