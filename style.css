@@ -22,7 +22,8 @@ nav {
     position: fixed;
     width: 100%;
     background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10
+    px);
     z-index: 1000;
 }
 
