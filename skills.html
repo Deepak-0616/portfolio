@@ -7,44 +7,107 @@
 <link rel="icon" type="image" href="./pf.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css">
+<style>
+
+
+ h2 {
+    text-align: center;
+    color: #ff004f;
+    font-size: 2.2rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}  
+
+</style>
 </head>
 <body>
-
     <nav>
     <h1>MyPortfolio</h1>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="skills.html">Skills</a></li>
+        <li><a href="./comingsoon.html" target="_blank">Projects</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-</nav>
+</nav> <br><br><br>
 
-
-
-    <section id="skills">
-        <br><br>
-    <h2 style="text-align:center; color:#ff004f;">My Skills</h2><br>
-    <br><div class="skills">
-        <div class="skill-card"><h3> C</h3></div>
-        <div class="skill-card"><h3>C++</h3></div>
-        <div class="skill-card"><h3>PYTHON</h3></div>
-        <div class="skill-card"><h3>GIT & GITHUB</h3></div>
-        <div class="skill-card"><h3>HTML5</h3></div>
-        <div class="skill-card"><h3>CSS3</h3></div>
-        <div class="skill-card"><h3>BOOTSTRAP</h3></div>
-        <div class="skill-card"><h3>JAVASCRIPT</h3></div>
-        
-
+<h2>My Skills</h2>
+<div class="skills-grid">
+     <div class="skill-card">
+        <h3>C</h3>
+        <div class="progress"><div class="progress-bar" data-width="90%">90%</div></div>
     </div>
-</section>
+    <div class="skill-card">
+        <h3>C++</h3>
+        <div class="progress"><div class="progress-bar" data-width="75%">75%</div></div>
+    </div>
+    <div class="skill-card">
+        <h3>Python</h3>
+        <div class="progress"><div class="progress-bar" data-width="80%">80%</div></div>
+    </div>
+    <div class="skill-card">
+        <h3>Git & GitHub</h3>
+        <div class="progress"><div class="progress-bar" data-width="50%">50%</div></div>
+    </div>
+    <div class="skill-card">
+        <h3>HTML5</h3>
+        <div class="progress"><div class="progress-bar" data-width="95%">95%</div></div>
+    </div>
+    <div class="skill-card">
+        <h3>CSS3</h3>
+        <div class="progress"><div class="progress-bar" data-width="90%">90%</div></div>
+    </div>
+    <div class="skill-card">
+        <h3>Bootstrap</h3>
+        <div class="progress"><div class="progress-bar" data-width="70%">70%</div></div>
+    </div>
+    <div class="skill-card">
+        <h3>JavaScript</h3>
+        <div class="progress"><div class="progress-bar" data-width="20%">20%</div></div>
+    </div>
+     <!-- <div class="skill-card">
+        <h3>coming soon...</h3>
+        <div class="progress"><div class="progress-bar" data-width="0%">0%</div></div>
+    </div>
+    <div class="skill-card">
+        <h3>coming soon...</h3>
+        <div class="progress"><div class="progress-bar" data-width="0%">0%</div></div>
+    </div>  -->
+</div> 
 
-
-<br><br><br><br><br><br>
 <footer style="padding: 25px;">
     <p>&copy; 2025 Deepak Sabarirajan | All Rights Reserved | Designed & Developed with Excellence.</p>
 </footer>
+
+
+
+<script>
+ const skillCards = document.querySelectorAll(".skill-card");
+ const bars = document.querySelectorAll(".progress-bar");
+
+ function showSkillsOnScroll() {
+     const triggerBottom = window.innerHeight * 0.85;
+     skillCards.forEach((card, i) => {
+         const cardTop = card.getBoundingClientRect().top;
+         if (cardTop < triggerBottom) {
+             card.classList.add("visible");
+             const bar = card.querySelector(".progress-bar");
+            const targetWidth = bar.getAttribute("data-width");
+             setTimeout(() => {
+                 bar.style.width = targetWidth;
+             }, i * 150);
+         }
+     });
+ }
+
+ window.addEventListener("scroll", showSkillsOnScroll);
+ window.addEventListener("load", showSkillsOnScroll);
+
+
+</script>
+
 </body>
 </html>

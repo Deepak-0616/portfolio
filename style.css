@@ -52,6 +52,7 @@ nav ul li a:hover {
     color: #ff004f;
 }
 
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -112,31 +113,66 @@ section {
     color: #ff004f;
 }
 
-/* Skills */
-.skills {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
 .skill-card {
-    background: #1a1a1a;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 20px;
-    border-radius: 12px;
-    flex: 1 1 calc(25% - 40px);
-    min-width: 200px;
     text-align: center;
-    transition: 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.skill-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .skill-card:hover {
-    transform: translateY(-8px);
-    background: #ff004f;
+    transform: scale(1.05);
+    background-color: #ff004f;
+    
 }
 
 .skill-card h3 {
+    color: #fff;
     margin-bottom: 10px;
+    font-size: 1.3rem;
+} */
+
+/* Progress Bar */
+.progress {
+    background: #222;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 18px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #ff004f, #ff7b7b);
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    padding-right: 8px;
+    line-height: 18px;
+    border-radius: 20px;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+    font-size: 0.8rem;
 }
 
 /* Projects */
@@ -194,6 +230,7 @@ section {
 .social-icons a:hover {
     color: #ff004f;
     transform: scale(1.2);
+
 }
 
 /* Timeline */
