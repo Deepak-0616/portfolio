@@ -235,7 +235,11 @@ section {
     transform: scale(1.2);
 
 }
-
+.education-container h1
+{
+    font-size: 37px;
+     color: #ff004f;
+}
 /* Timeline */
 .timeline {
     position: relative;
