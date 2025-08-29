@@ -55,7 +55,8 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 60vh;
+    min-height: 87vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,6 +106,7 @@ section {
     max-width: 800px;
     margin: auto;
     text-align: center;
+    min-height: 87.6vh;
 }
 
 .about h2 {
@@ -206,6 +208,7 @@ section {
 /* Contact */
 .contact {
     text-align: center;
+    min-height: 87vh;
 }
 
 .contact a {
@@ -308,7 +311,8 @@ section {
 .coming-soon 
 {
     text-align: center;
-    margin-top: 160px;
+    margin-top: 130px;
+    /* min-height: 35vh; */
 }
 
 .coming-soon h1 {
@@ -317,6 +321,10 @@ section {
     margin-bottom: 15px;
 }
 
+.comsoon
+{
+    min-height:87.6vh;
+}
 .coming-soon p {
     font-size: 1.2rem;
     color: #dcdcdc;
