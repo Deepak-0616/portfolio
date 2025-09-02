@@ -5,14 +5,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Body */
 body {
     background-color: #0d0d0d;
     color: #fff;
     line-height: 1.6;
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
@@ -51,7 +49,7 @@ nav ul li a:hover {
 }
 
 
-/* Hero Section */
+
 .hero {
     height: 60vh;
     min-height: 89vh;
@@ -94,12 +92,12 @@ nav ul li a:hover {
     color: #ff004f;
 }
 
-/* Sections */
+
 section {
     padding: 80px 50px;
 }
 
-/* About */
+
 .about {
     max-width: 800px;
     margin: auto;
@@ -154,9 +152,7 @@ section {
     font-size: 1.3rem;
 }
 
-*/
 
-/* Progress Bar */
 .progress {
     background: #222;
     border-radius: 20px;
@@ -178,7 +174,6 @@ section {
     font-size: 0.8rem;
 }
 
-/* Projects */
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -191,13 +186,13 @@ section {
     border-radius: 12px;
     overflow: hidden;
     transition: 0.3s;
-    
+
 }
 
 .project-card h3 {
     padding: 15px;
     font-size: 20px;
-    color:white;
+    color: white;
 }
 
 .project-card:hover {
@@ -208,14 +203,14 @@ section {
 .project-card img {
     width: 100%;
     height: 180px;
-    object-fit:cover;
+    object-fit: cover;
 }
 
 .project-card h3 {
     padding: 15px;
 }
 
-/* Contact */
+
 .contact {
     text-align: center;
     min-height: 87vh;
@@ -227,7 +222,7 @@ section {
     font-size: 18px;
 }
 
-/* Social Icons */
+
 .social-icons {
     margin-top: 20px;
 }
@@ -251,7 +246,7 @@ section {
     color: #ff004f;
 }
 
-/* Timeline */
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -326,7 +321,7 @@ section {
 .coming-soon {
     text-align: center;
     margin-top: 130px;
-    /* min-height: 35vh; */
+
 }
 
 .coming-soon h1 {
@@ -365,7 +360,6 @@ section {
     }
 }
 
-/* Footer */
 footer {
     display: flex;
     flex-direction: column;
@@ -376,7 +370,6 @@ footer {
     opacity: 0.6;
 }
 
-/* Animations */
 @keyframes fadeInUp {
     from {
         transform: translateY(20px);
@@ -389,7 +382,7 @@ footer {
     }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .timeline-item {
         width: 100%;
