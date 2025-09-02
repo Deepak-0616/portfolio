@@ -182,7 +182,6 @@ section {
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 per row */
     gap: 25px;
     padding: 30px 60px;
 }
@@ -192,23 +191,24 @@ section {
     border-radius: 12px;
     overflow: hidden;
     transition: 0.3s;
-
+    
 }
 
 .project-card h3 {
     padding: 15px;
     font-size: 20px;
-    color: #ff004f;
+    color:white;
 }
 
 .project-card:hover {
     transform: scale(1.03);
+    background-color: #ff004f;
 }
 
 .project-card img {
     width: 100%;
     height: 180px;
-    object-fit: cover;
+    object-fit:cover;
 }
 
 .project-card h3 {
