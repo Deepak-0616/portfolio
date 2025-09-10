@@ -179,7 +179,9 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     padding: 30px 60px;
+
 }
+
 
 .project-card {
     background: #1a1a1a;
@@ -382,6 +384,13 @@ footer {
     }
 }
 
+@media (max-width: 1024px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px 40px;
+    }
+}
+
 
 @media (max-width: 992px) {
     .timeline-item {
@@ -395,6 +404,15 @@ footer {
 
     .timeline-icon {
         left: -3px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 30px 60px;
+    }
+
+    .project-card h3 {
+        font-size: 20px;
     }
 }
 
@@ -418,6 +436,15 @@ footer {
     .timeline-item {
         padding-left: 50px;
     }
+
+    .projects {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -432,5 +459,10 @@ footer {
     .hero button {
         font-size: 14px;
         padding: 10px 20px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px 0px;
     }
 }
