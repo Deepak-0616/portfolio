@@ -80,8 +80,8 @@ nav ul li a:hover {
     color: white;
     padding: 12px 25px;
     border: none;
-    margin-top: 20px;
-    font-size: 16px;
+    margin-top: 60px;
+    font-size: 26px;
     cursor: pointer;
     border-radius: 30px;
     transition: 0.3s;
@@ -96,21 +96,6 @@ nav ul li a:hover {
 section {
     padding: 80px 50px;
 }
-
-
-.about {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    min-height: 89vh;
-}
-
-.about h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #ff004f;
-}
-
 
 .skills-grid {
     display: grid;
@@ -231,8 +216,8 @@ section {
 
 .social-icons a {
     color: white;
-    font-size: 37px;
-    margin: 0 15px;
+    font-size: 50px;
+    margin: 0 25px;
     display: inline-block;
     transition: 0.3s ease-in-out;
 }
