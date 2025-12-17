@@ -22,15 +22,21 @@
 
 <body>
     <nav>
-        <h1>MyPortfolio</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav> <br><br><br>
+    <h1>MyPortfolio</h1>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav> <br><br><br>
 
     <h2>My Skills</h2>
     <div class="skills-grid">
@@ -99,6 +105,13 @@
 
 
     <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
         const skillCards = document.querySelectorAll(".skill-card");
         const bars = document.querySelectorAll(".progress-bar");
 

@@ -11,6 +11,13 @@ body {
     line-height: 1.6;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -51,28 +58,37 @@ nav ul li a:hover {
 
 
 .hero {
-    height: 60vh;
-    min-height: 89vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 0 20px;
+    justify-content: space-between;
+    padding: 80px 10%;
+    gap: 40px;
 }
 
-.hero h2 {
-    font-size: 40px;
-    animation: fadeInUp 1s ease forwards;
+.hero-content {
+    max-width: 600px;
 }
 
-.hero h2 span {
+.hero-content h2 {
+    font-size: 20px;
+}
+
+.hero-content span {
     color: #ff004f;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-top: 15px;
-    opacity: 0.8;
+.hero-content p {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.hero-img img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff004f;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hero button {
@@ -369,6 +385,10 @@ footer {
     }
 }
 
+/* =========================
+   LARGE TABLETS / SMALL LAPTOPS
+   ≤1024px
+========================= */
 @media (max-width: 1024px) {
     .projects {
         grid-template-columns: repeat(3, 1fr);
@@ -377,7 +397,13 @@ footer {
 }
 
 
+/* =========================
+   TABLETS
+   ≤992px
+========================= */
 @media (max-width: 992px) {
+
+    /* TIMELINE */
     .timeline-item {
         width: 100%;
         left: 0 !important;
@@ -391,63 +417,131 @@ footer {
         left: -3px;
     }
 
+    /* PROJECTS */
     .projects {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 30px 60px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 25px 40px;
     }
 
     .project-card h3 {
-        font-size: 20px;
+        font-size: 19px;
     }
 }
 
+
+/* =========================
+   TABLET & MOBILE
+   ≤768px
+========================= */
 @media (max-width: 768px) {
+
+    /* NAVBAR */
     nav {
-        flex-direction: column;
-        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     nav ul {
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .skills {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 45%;
+        background: rgba(0, 0, 0, 0.95);
         flex-direction: column;
         align-items: center;
+        display: none;
+        padding: 25px 0;
+        border-radius: 0 0 0 12px;
     }
 
-    .timeline-item {
-        padding-left: 50px;
+    nav ul.active {
+        display: flex;
     }
 
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    nav ul li a:hover {
+        color: #ff004f;
+    }
+
+    /* HERO */
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+        padding: 20px;
+    }
+
+    /* PROJECTS */
     .projects {
         grid-template-columns: 1fr;
         padding: 20px;
     }
 
-    .project-card h3 {
-        font-size: 18px;
+    /* TIMELINE */
+    .timeline-item {
+        padding-left: 55px;
     }
 }
 
+
+/* =========================
+   SMALL DEVICES
+   ≤480px
+========================= */
 @media (max-width: 480px) {
-    .hero h2 {
-        font-size: 28px;
+
+    /* NAV MENU */
+    nav ul {
+        width: 45%;
+        top: 65px;
+        border-radius: 0;
     }
 
-    .hero p {
-        font-size: 16px;
+    nav h1 {
+        font-size: 22px;
+    }
+
+    nav ul li a:hover {
+        color: #ff004f;
+    }
+
+    /* HERO */
+    .hero-img img {
+        width: 200px;
+        height: 200px;
     }
 
     .hero button {
         font-size: 14px;
         padding: 10px 20px;
+        margin-top: 30px;
     }
 
-    .projects {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 0px 0px;
+    /* PROJECTS */
+    .project-card img {
+        height: 160px;
     }
+
+    /* CONTACT */
+    .social-icons a {
+        font-size: 38px;
+        margin: 0 15px;
+    }
+
 }
