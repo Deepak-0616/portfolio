@@ -55,8 +55,6 @@ nav ul li a:hover {
     color: #ff004f;
 }
 
-
-
 .hero {
     display: flex;
     align-items: center;
@@ -153,7 +151,6 @@ section {
     font-size: 1.3rem;
 }
 
-
 .progress {
     background: #222;
     border-radius: 20px;
@@ -182,7 +179,6 @@ section {
     padding: 30px 60px;
 
 }
-
 
 .project-card {
     background: #1a1a1a;
@@ -213,7 +209,6 @@ section {
     padding: 15px;
 }
 
-
 .contact {
     text-align: center;
     min-height: 87vh;
@@ -224,7 +219,6 @@ section {
     text-decoration: none;
     font-size: 18px;
 }
-
 
 .social-icons {
     margin-top: 20px;
@@ -248,7 +242,6 @@ section {
     font-size: 37px;
     color: #ff004f;
 }
-
 
 .timeline {
     position: relative;
@@ -290,7 +283,6 @@ section {
 .timeline-item:nth-child(even) {
     left: 55%;
 }
-
 
 .timeline-icon {
     position: absolute;
@@ -385,10 +377,6 @@ footer {
     }
 }
 
-/* =========================
-   LARGE TABLETS / SMALL LAPTOPS
-   ≤1024px
-========================= */
 @media (max-width: 1024px) {
     .projects {
         grid-template-columns: repeat(3, 1fr);
@@ -396,14 +384,7 @@ footer {
     }
 }
 
-
-/* =========================
-   TABLETS
-   ≤992px
-========================= */
 @media (max-width: 992px) {
-
-    /* TIMELINE */
     .timeline-item {
         width: 100%;
         left: 0 !important;
@@ -417,7 +398,6 @@ footer {
         left: -3px;
     }
 
-    /* PROJECTS */
     .projects {
         grid-template-columns: repeat(2, 1fr);
         padding: 25px 40px;
@@ -428,14 +408,7 @@ footer {
     }
 }
 
-
-/* =========================
-   TABLET & MOBILE
-   ≤768px
-========================= */
 @media (max-width: 768px) {
-
-    /* NAVBAR */
     nav {
         flex-direction: row;
         justify-content: space-between;
@@ -475,38 +448,28 @@ footer {
         color: #ff004f;
     }
 
-    /* HERO */
     .hero {
         flex-direction: column-reverse;
         text-align: center;
         padding-top: 120px;
     }
 
-    /* SKILLS */
     .skills-grid {
         padding: 20px;
     }
 
-    /* PROJECTS */
     .projects {
         grid-template-columns: 1fr;
         padding: 20px;
     }
 
-    /* TIMELINE */
     .timeline-item {
         padding-left: 55px;
     }
 }
 
-
-/* =========================
-   SMALL DEVICES
-   ≤480px
-========================= */
 @media (max-width: 480px) {
 
-    /* NAV MENU */
     nav ul {
         width: 45%;
         top: 65px;
@@ -521,7 +484,6 @@ footer {
         color: #ff004f;
     }
 
-    /* HERO */
     .hero-img img {
         width: 200px;
         height: 200px;
@@ -533,12 +495,10 @@ footer {
         margin-top: 30px;
     }
 
-    /* PROJECTS */
     .project-card img {
         height: 160px;
     }
 
-    /* CONTACT */
     .social-icons a {
         font-size: 38px;
         margin: 0 15px;
