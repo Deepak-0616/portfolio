@@ -22,21 +22,20 @@
 
 <body>
     <nav>
-    <h1>MyPortfolio</h1>
+        <h1>MyPortfolio</h1>
 
-    <!-- Hamburger -->
-    <div class="menu-toggle" id="menuToggle">
-        <i class="fa-solid fa-bars"></i>
-    </div>
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-    <ul id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav> <br><br><br>
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav> <br><br><br>
 
     <h2>My Skills</h2>
     <div class="skills-grid">
@@ -89,29 +88,25 @@
             </div>
         </div>
         <div class="skill-card">
-        <h3>Dart</h3>
-        <div class="progress"><div class="progress-bar" data-width="60%">60%</div></div>
-    </div>
-    <!-- <div class="skill-card">
-        <h3>coming soon...</h3>
-        <div class="progress"><div class="progress-bar" data-width="0%">0%</div></div>
-    </div>  -->
+            <h3>Dart</h3>
+            <div class="progress">
+                <div class="progress-bar" data-width="60%">60%</div>
+            </div>
+        </div>
     </div>
 
     <footer style="padding: 25px;">
         <p>&copy; 2025 Deepak Sabarirajan | All Rights Reserved | Designed & Developed with Excellence.</p>
     </footer>
 
-
-
     <script>
 
         const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+        const navLinks = document.getElementById("navLinks");
 
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
         const skillCards = document.querySelectorAll(".skill-card");
         const bars = document.querySelectorAll(".progress-bar");
 
