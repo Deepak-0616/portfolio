@@ -1,5 +1,5 @@
 # Portfolio
 
-My personal portfolio showcasing skills and projects.
+My personal portfolio showcasing skills, projects and journey of Education.
 
-view here... https://deepak-0616.github.io/portfolio/
+view here: https://deepak-0616.github.io/portfolio/
