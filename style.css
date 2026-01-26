@@ -209,17 +209,6 @@ section {
     padding: 15px;
 }
 
-.contact {
-    text-align: center;
-    min-height: 87vh;
-}
-
-.contact a {
-    color: #ff004f;
-    text-decoration: none;
-    font-size: 18px;
-}
-
 .social-icons {
     margin-top: 20px;
 }
